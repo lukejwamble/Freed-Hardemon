@@ -2,6 +2,7 @@ import hardemons_class
 import damage
 import moves
 
+
 def Begin():
     battle_ended = False
 
@@ -33,17 +34,32 @@ def Begin():
 
         # First Player Move Selection
         print(f'\nPick your move!')
-        print(f'{first.name}\'s Available Moves: {first.moves[0]} | move_slot_2 | move_slot_3 | move_slot_4')
+        print(f'{first.name}\'s Available Moves: {first.moves[0]} | {first.moves[1]} | {first.moves[2]} | {first.moves[3]}')
         first_action = input()
         if first_action == "Tackle":
             first_move = moves.Tackle
+        elif first_action == "Punch":
+            first_move = moves.Punch
+        elif first_action == "Kick":
+            first_move = moves.Kick
+        else:
+            first_move = moves.Special
+            first_pp -= 100
 
         # Second Player Move Selection
         print(f'\nPick your move!')
-        print(f'{second.name}\'s Available Moves: {second.moves[0]} | move_slot_2 | move_slot_3 | move_slot_4')
+        print(f'{second.name}\'s Available Moves: {second.moves[0]} | {first.moves[1]} | {first.moves[2]} | {first.moves[3]}')
         second_action = input()
         if second_action == "Tackle":
             second_move = moves.Tackle
+        elif second_action == "Punch":
+            second_move = moves.Punch
+        elif first_action == "Kick":
+            second_move = moves.Kick
+        else:
+            second_move = moves.Special
+            second_pp -= 100
+            
 
         # First Player Damage Calculation
         damage.damageCalc(player1_hardemon, player2_hardemon, first_move)

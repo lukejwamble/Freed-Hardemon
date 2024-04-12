@@ -27,7 +27,7 @@ tjkirk.health = 140
 tjkirk.attack = 60
 tjkirk.defense = 150
 tjkirk.speed = 50
-tjkirk.moves = ["Tackle", "Punch","Kick", "Gano Menu"]
+tjkirk.moves = ["Tackle", "Punch", "Kick", "Gano Menu"]
 
 lacycrowell = Hardemon()
 lacycrowell.name = "Lacy Crowell"

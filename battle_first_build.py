@@ -1,16 +1,16 @@
 import hardemons_class
 import damage
 import moves
-
+from termcolor import colored, cprint
 
 def Begin():
     battle_ended = False
 
     # Gets player names
     print('\nPlayer 1, what is your name?')
-    player1 = input()
+    player1 = colored(input(), "red")
     print('Player 2, what is your name?')
-    player2 = input()
+    player2 = colored(input(), "cyan")
 
     # Gets player's Hardemons
     player1_hardemon = hardemons_class.tjkirk
@@ -44,7 +44,6 @@ def Begin():
             first_move = moves.Kick
         else:
             first_move = moves.Special
-            first_pp -= 100
 
         # Second Player Move Selection
         print(f'\nPick your move!')
@@ -58,7 +57,6 @@ def Begin():
             second_move = moves.Kick
         else:
             second_move = moves.Special
-            second_pp -= 100
             
 
         # First Player Damage Calculation

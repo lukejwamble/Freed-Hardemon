@@ -1,3 +1,5 @@
+import moves
+
 class Hardemon():
     def __init__(self):
         self.name = "Unknown"
@@ -17,7 +19,7 @@ davidshannon.health = 95
 davidshannon.attack = 95
 davidshannon.defense = 95
 davidshannon.speed = 115
-davidshannon.moves = ["Tackle", "Punch", "Kick",  "Day of Giving"]
+davidshannon.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Day_of_Giving]
 
 tjkirk = Hardemon()
 tjkirk.name = "TJ Kirk"
@@ -27,7 +29,7 @@ tjkirk.health = 140
 tjkirk.attack = 60
 tjkirk.defense = 150
 tjkirk.speed = 50
-tjkirk.moves = ["Tackle", "Punch","Kick", "Gano Menu"]
+tjkirk.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Gano_Menu]
 
 lacycrowell = Hardemon()
 lacycrowell.name = "Lacy Crowell"
@@ -37,7 +39,7 @@ lacycrowell.health = 125
 lacycrowell.attack = 175
 lacycrowell.defense = 75
 lacycrowell.speed = 25
-lacycrowell.moves = ["Tackle", "Punch", "Kick", "Black Belt"]
+lacycrowell.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Black_Belt]
 
 kenancasey = Hardemon()
 kenancasey.name = "Kenan Casey"
@@ -47,7 +49,7 @@ kenancasey.health = 90
 kenancasey.attack = 120
 kenancasey.defense = 105
 kenancasey.speed = 85
-kenancasey.moves = ["Tackle", "Punch", "Kick", "Meme"]
+kenancasey.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Meme]
 
 lisaraine = Hardemon()
 lisaraine.name = "Lisa Raine"
@@ -57,7 +59,7 @@ lisaraine.health = 85
 lisaraine.attack = 120
 lisaraine.defense = 78
 lisaraine.speed = 117
-lisaraine.moves = ["Tackle", "Punch", "Kick", ""]
+lisaraine.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.No_Move_Given]
 
 jaredcollins = Hardemon()
 jaredcollins.name = "Jared Collins"
@@ -67,7 +69,7 @@ jaredcollins.health = 100
 jaredcollins.attack = 110
 jaredcollins.defense = 55
 jaredcollins.speed = 135
-jaredcollins.moves = ["Tackle", "Punch", "Kick", "Dry Erase Marker"]
+jaredcollins.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Dry_Erase_Marker]
 
 davidtidwell = Hardemon()
 davidtidwell.name = "David Tidwell"
@@ -77,7 +79,7 @@ davidtidwell.health = 100
 davidtidwell.attack = 85
 davidtidwell.defense = 160
 davidtidwell.speed = 55
-davidtidwell.moves = ["Tackle", "Punch", "Kick", "Horrible Test Answer"]
+davidtidwell.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Horrible_Test_Answer]
 
 dougburleson = Hardemon()
 dougburleson.name = "Doug Burleson"
@@ -87,7 +89,7 @@ dougburleson.health = 120
 dougburleson.attack = 75
 dougburleson.defense = 120
 dougburleson.speed = 75
-dougburleson.moves = ["Tackle", "Punch", "Kick", "Greek Translation"]
+dougburleson.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Greek_Translation]
 
 donniedebord = Hardemon()
 donniedebord.name = "Donnie DeBord"
@@ -97,7 +99,7 @@ donniedebord.health = 75
 donniedebord.attack = 120
 donniedebord.defense = 75
 donniedebord.speed = 120
-donniedebord.moves = ["Tackle", "Punch", "Kick", ""]
+donniedebord.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Right_Doctrine]
 
 jimgardner = Hardemon()
 jimgardner.name = "Jim Gardner"
@@ -107,7 +109,7 @@ jimgardner.health = 25
 jimgardner.attack = 150
 jimgardner.defense = 25
 jimgardner.speed = 200
-jimgardner.moves = ["Tackle", "Punch", "Kick", "Dog Attack"]
+jimgardner.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Dog_Attack]
 
 hardemon_list = [davidshannon, tjkirk, lacycrowell,
                  kenancasey, lisaraine, jaredcollins, 

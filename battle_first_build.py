@@ -11,10 +11,42 @@ def Begin():
     player1 = input()
     print('Player 2, what is your name?')
     player2 = input()
+    print("")
 
     # Gets player's Hardemons
-    player1_hardemon = hardemons_class.tjkirk
-    player2_hardemon = hardemons_class.davidshannon
+    player1_hardemon = None
+    player2_hardemon = None
+    # Prints list of available hardemon
+    increment = 1
+    for i in hardemons_class.hardemon_list:
+        print(f'{increment}: {i.name}')
+        increment += 1
+
+    # Loop to make sure that player1 selection is valid
+    player1_check = False
+    while player1_check == False:
+        print(f'\n{player1}, select your Hardemon!')
+        player1_pick = int(input())
+        if player1_pick > 0 and player1_pick <= 10:
+            for i in hardemons_class.hardemon_list:
+                if player1_pick == i.id:
+                    player1_hardemon = i
+                    player1_check = True
+        else:
+            continue
+
+    # Loop to make sure that player2 selection is valid
+    player2_check = False
+    while player2_check == False:
+        print(f'\n{player2}, select your Hardemon!')
+        player2_pick = int(input())
+        if player2_pick > 0 and player2_pick <= 10:
+            for i in hardemons_class.hardemon_list:
+                if player2_pick == i.id:
+                    player2_hardemon = i
+                    player2_check = True
+        else:
+            continue
 
     print(f'\nToday\'s fighters are {player1} and {player2}. \n')
     print(f'{player1} will be fighting with {player1_hardemon.name}. {player2} will be fighting with {player2_hardemon.name}.')
@@ -34,31 +66,19 @@ def Begin():
 
         # First Player Move Selection
         print(f'\nPick your move!')
-        print(f'{first.name}\'s Available Moves: {first.moves[0]} | {first.moves[1]} | {first.moves[2]} | {first.moves[3]}')
+        print(f'{first.name}\'s Available Moves: {first.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')
         first_action = input()
-        if first_action == "Tackle":
-            first_move = moves.Tackle
-        elif first_action == "Punch":
-            first_move = moves.Punch
-        elif first_action == "Kick":
-            first_move = moves.Kick
-        else:
-            first_move = moves.Special
-            first_pp -= 100
+        for i in first.moves:
+            if i.name == first_action:
+                first_move = i.moves
 
         # Second Player Move Selection
         print(f'\nPick your move!')
-        print(f'{second.name}\'s Available Moves: {second.moves[0]} | {first.moves[1]} | {first.moves[2]} | {first.moves[3]}')
+        print(f'{second.name}\'s Available Moves: {second.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')
         second_action = input()
-        if second_action == "Tackle":
-            second_move = moves.Tackle
-        elif second_action == "Punch":
-            second_move = moves.Punch
-        elif first_action == "Kick":
-            second_move = moves.Kick
-        else:
-            second_move = moves.Special
-            second_pp -= 100
+        for i in second.moves:
+            if i.name == second:
+                second_move = i.moves
             
 
         # First Player Damage Calculation
@@ -74,6 +94,6 @@ def Begin():
                 print(f'\nPlayer 2 Wins!!!')
                 battle_ended = True
 
-        # Reiterates the loop until battlen_ended = True
+        # Reiterates the loop until battle_ended = True
         continue
             

@@ -31,6 +31,7 @@ tjkirk.defense = 150
 tjkirk.speed = 50
 tjkirk.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Gano_Menu]
 
+
 lacycrowell = Hardemon()
 lacycrowell.name = "Lacy Crowell"
 lacycrowell.id = 3

@@ -2,7 +2,6 @@ import hardemons_class
 import damage
 import moves
 
-
 def Begin():
     battle_ended = False
 
@@ -68,10 +67,11 @@ def Begin():
         print(f'\nPick your move!')
         print(f'{first.name}\'s Available Moves: {first.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')
         first_action = input()
+
         for i in first.moves:
             if i.name == first_action:
                 first_move = i.moves
-
+     
         # Second Player Move Selection
         print(f'\nPick your move!')
         print(f'{second.name}\'s Available Moves: {second.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')

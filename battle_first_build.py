@@ -1,15 +1,16 @@
 import hardemons_class
 import damage
 import moves
+from termcolor import colored, cprint
 
 def Begin():
     battle_ended = False
 
     # Gets player names
     print('\nPlayer 1, what is your name?')
-    player1 = input()
+    player1 = colored(input(), "red")
     print('Player 2, what is your name?')
-    player2 = input()
+    player2 = colored(input(), "cyan")
     print("")
 
     # Gets player's Hardemons
@@ -70,15 +71,15 @@ def Begin():
 
         for i in first.moves:
             if i.name == first_action:
-                first_move = i.moves
+                first_move = i
      
         # Second Player Move Selection
         print(f'\nPick your move!')
         print(f'{second.name}\'s Available Moves: {second.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')
         second_action = input()
         for i in second.moves:
-            if i.name == second:
-                second_move = i.moves
+            if i.name == second_action:
+                second_move = i
             
 
         # First Player Damage Calculation

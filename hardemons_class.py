@@ -13,7 +13,7 @@ class Hardemon():
         self.moves = []
 
 davidshannon = Hardemon()
-davidshannon.name = colored("David Shannon", "red")
+davidshannon.name = colored("David Shannon", "green")
 davidshannon.id = 1
 davidshannon.max_health = 95
 davidshannon.health = 95
@@ -23,7 +23,7 @@ davidshannon.speed = 115
 davidshannon.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Day_of_Giving]
 
 tjkirk = Hardemon()
-tjkirk.name = colored("TJ Kirk", "black")
+tjkirk.name = colored("TJ Kirk", "red")
 tjkirk.id = 2
 tjkirk.max_health = 140
 tjkirk.health = 140
@@ -34,7 +34,7 @@ tjkirk.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Gano_Menu]
 
 
 lacycrowell = Hardemon()
-lacycrowell.name = colored("Lacy Crowell", "green")
+lacycrowell.name = colored("Lacy Crowell", "black")
 lacycrowell.id = 3
 lacycrowell.max_health = 125
 lacycrowell.health = 125

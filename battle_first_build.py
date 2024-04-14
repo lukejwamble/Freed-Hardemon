@@ -75,7 +75,7 @@ def Begin():
      
         # Second Player Move Selection
         print(f'\nPick your move!')
-        print(f'{second.name}\'s Available Moves: {second.moves[0].name} | {first.moves[1].name} | {first.moves[2].name} | {first.moves[3].name}')
+        print(f'{second.name}\'s Available Moves: {second.moves[0].name} | {second.moves[1].name} | {second.moves[2].name} | {second.moves[3].name}')
         second_action = input()
         for i in second.moves:
             if i.name == second_action:

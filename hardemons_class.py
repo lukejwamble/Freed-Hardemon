@@ -1,4 +1,5 @@
 import moves
+from termcolor import colored, cprint
 
 class Hardemon():
     def __init__(self):
@@ -12,7 +13,7 @@ class Hardemon():
         self.moves = []
 
 davidshannon = Hardemon()
-davidshannon.name = "David Shannon"
+davidshannon.name = colored("David Shannon", "red")
 davidshannon.id = 1
 davidshannon.max_health = 95
 davidshannon.health = 95
@@ -22,7 +23,7 @@ davidshannon.speed = 115
 davidshannon.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Day_of_Giving]
 
 tjkirk = Hardemon()
-tjkirk.name = "TJ Kirk"
+tjkirk.name = colored("TJ Kirk", "black")
 tjkirk.id = 2
 tjkirk.max_health = 140
 tjkirk.health = 140
@@ -33,7 +34,7 @@ tjkirk.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Gano_Menu]
 
 
 lacycrowell = Hardemon()
-lacycrowell.name = "Lacy Crowell"
+lacycrowell.name = colored("Lacy Crowell", "green")
 lacycrowell.id = 3
 lacycrowell.max_health = 125
 lacycrowell.health = 125
@@ -43,7 +44,7 @@ lacycrowell.speed = 25
 lacycrowell.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Black_Belt]
 
 kenancasey = Hardemon()
-kenancasey.name = "Kenan Casey"
+kenancasey.name = colored("Kenan Casey", "yellow")
 kenancasey.id = 4
 kenancasey.max_health = 90
 kenancasey.health = 90
@@ -53,7 +54,7 @@ kenancasey.speed = 85
 kenancasey.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Meme]
 
 lisaraine = Hardemon()
-lisaraine.name = "Lisa Raine"
+lisaraine.name = colored("Lisa Raine", "magenta")
 lisaraine.id = 5
 lisaraine.max_health = 85
 lisaraine.health = 85
@@ -63,7 +64,7 @@ lisaraine.speed = 117
 lisaraine.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.No_Move_Given]
 
 jaredcollins = Hardemon()
-jaredcollins.name = "Jared Collins"
+jaredcollins.name = colored("Jared Collins", "blue")
 jaredcollins.id = 6
 jaredcollins.max_health = 100
 jaredcollins.health = 100
@@ -73,7 +74,7 @@ jaredcollins.speed = 135
 jaredcollins.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Dry_Erase_Marker]
 
 davidtidwell = Hardemon()
-davidtidwell.name = "David Tidwell"
+davidtidwell.name = colored("David Tidwell", "cyan")
 davidtidwell.id = 7
 davidtidwell.max_health = 100
 davidtidwell.health = 100
@@ -83,7 +84,7 @@ davidtidwell.speed = 55
 davidtidwell.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Horrible_Test_Answer]
 
 dougburleson = Hardemon()
-dougburleson.name = "Doug Burleson"
+dougburleson.name = colored("Doug Burleson", "white")
 dougburleson.id = 8
 dougburleson.max_health = 120
 dougburleson.health = 120
@@ -93,7 +94,7 @@ dougburleson.speed = 75
 dougburleson.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Greek_Translation]
 
 donniedebord = Hardemon()
-donniedebord.name = "Donnie DeBord"
+donniedebord.name = colored("Donnie DeBord", "light_yellow")
 donniedebord.id = 9
 donniedebord.max_health = 75
 donniedebord.health = 75
@@ -103,7 +104,7 @@ donniedebord.speed = 120
 donniedebord.moves = [moves.Tackle, moves.Punch, moves.Kick, moves.Right_Doctrine]
 
 jimgardner = Hardemon()
-jimgardner.name = "Jim Gardner"
+jimgardner.name = colored("Jim Gardner", "red", attrs=["bold"])
 jimgardner.id = 10
 jimgardner.max_health = 25
 jimgardner.health = 25

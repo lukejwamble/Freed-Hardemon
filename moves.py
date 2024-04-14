@@ -1,3 +1,5 @@
+from termcolor import colored, cprint
+
 class Moves():
     def __init__(self):
         self.name = ""
@@ -7,7 +9,7 @@ class Moves():
 Tackle = Moves()
 Tackle.name = "Tackle"
 Tackle.damage = 40
-Tackle.accuracy = 90
+Tackle.accuracy = 70
 
 Punch = Moves()
 Punch.name = "Punch"
@@ -41,8 +43,8 @@ Meme.accuracy = 95
 
 No_Move_Given = Moves()
 No_Move_Given.name = "No Name Given"
-No_Move_Given.damage = 50
-No_Move_Given.accuracy = 80
+No_Move_Given.damage = 0
+No_Move_Given.accuracy = 0
 
 Dry_Erase_Marker = Moves()
 Dry_Erase_Marker.name = "Dry Erase Marker"

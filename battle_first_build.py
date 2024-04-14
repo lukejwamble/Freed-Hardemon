@@ -3,9 +3,28 @@ import damage
 import moves
 from termcolor import colored, cprint
 
+print_red = lambda x: cprint(x, "red")
+print_cyan = lambda x: cprint(x, "cyan")
+print_bold = lambda x: cprint(x, attrs = ["bold"])
+
 def Begin():
     battle_ended = False
 
+    #Introduction
+    print("")
+    print("Welcome to ", colored("Freed Hardēmon!", "red"), "The newest Pokemon style game where")
+    print("you get to play as your favorite Freed Hardemon faculty members.")
+    print("")
+    print("You get to choose one Hardēmon, so choose wisely.")
+    print("Each Hardēmon has four moves:")
+    print_bold("Tackle,")
+    print_bold("Punch,")
+    print_bold("Kick,")
+    print("and their", colored("special", attrs= ["bold"]), "move.")
+    print("Some moves deal a bigger punch but have lower accuracy, so choose wisely.")
+    print("")
+    print("So, are you ready?")
+    
     # Gets player names
     print('\nPlayer 1, what is your name?')
     player1 = colored(input(), "red")
@@ -40,13 +59,16 @@ def Begin():
     while player2_check == False:
         print(f'\n{player2}, select your Hardemon!')
         player2_pick = int(input())
-        if player2_pick > 0 and player2_pick <= 10:
-            for i in hardemons_class.hardemon_list:
-                if player2_pick == i.id:
-                    player2_hardemon = i
-                    player2_check = True
-        else:
+        if player2_pick == player1_pick:
             continue
+        else:
+            if player2_pick > 0 and player2_pick <= 10:
+                for i in hardemons_class.hardemon_list:
+                    if player2_pick == i.id:
+                        player2_hardemon = i
+                        player2_check = True
+            else:
+                continue
 
     print(f'\nToday\'s fighters are {player1} and {player2}. \n')
     print(f'{player1} will be fighting with {player1_hardemon.name}. {player2} will be fighting with {player2_hardemon.name}.')
@@ -85,14 +107,14 @@ def Begin():
         # First Player Damage Calculation
         damage.damageCalc(player1_hardemon, player2_hardemon, first_move)
         if second.health <= 0:
-            print(f'\nPlayer 1 Wins!!!')
+            print_red(f'\n{player1} Wins!!!')
             battle_ended = True
         
         # Second Player Damage Calculation
         else:
             damage.damageCalc(player2_hardemon, player1_hardemon, second_move)
             if first.health <= 0:
-                print(f'\nPlayer 2 Wins!!!')
+                print_cyan(f'\n{player2} Wins!!!')
                 battle_ended = True
 
         # Reiterates the loop until battle_ended = True

@@ -15,7 +15,7 @@ def Begin():
     print("Welcome to ", colored("Freed Hardēmon!", "red"), "The newest Pokemon style game where")
     print("you get to play as your favorite Freed Hardemon faculty members.")
     print("")
-    print("You get to choose one Hardēmon, so choose wisely.")
+    print("You only get to choose one Hardēmon, so choose wisely.")
     print("Each Hardēmon has four moves:")
     print_bold("Tackle,")
     print_bold("Punch,")
